@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nishant Bisht | Full Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Nishant, Full Stack Developer building modern web applications with clean code, beautiful UI and a passion for solving real-world problems.">
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Header / Floating Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="nav-container glass" id="navbar">
+      <a href="#home" class="nav-brand" aria-label="Nishant Home">
+        <span class="brand-monogram">N</span>
+        <span class="brand-name">Nishant</span>
+        <span class="status-indicator" title="Available for new projects"></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-action">
+          <a href="#resumeModal" class="btn-resume-pill" id="openResumeBtn">Resume &gt;</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Available for opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="hero-name glow-text">Nishant Bisht</span>
+            <span class="hero-role">Full Stack Developer</span>
+          </h1>
+
+          <p class="hero-bio">
+            I build modern web applications with clean code, beautiful UI and a passion for solving real-world problems,
+            along with having many other skills too.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="cta-view-projects">
+              <span>My Projects</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="cta-contact-me">
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Performance Obsessed</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Full-Stack</span>
+              <span class="stat-label">End-to-End Delivery</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Clean UI</span>
+              <span class="stat-label">Any Aesthetics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="tech-card-showcase glass">
+            <div class="code-header">
+              <div class="window-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="code-title">engineer.config.ts</span>
+              <span class="code-badge">Live</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="syntax-keyword">const</span> <span class="syntax-var">developer</span> = {
+  <span class="syntax-prop">name</span>: <span class="syntax-string">"Nishant"</span>,
+  <span class="syntax-prop">role</span>: <span class="syntax-string">"Full Stack Developer"</span>,
+  <span class="syntax-prop">focus</span>: [<span class="syntax-string">"High Performance"</span>, <span class="syntax-string">"Modern UI"</span>],
+  <span class="syntax-prop">architecture</span>: <span class="syntax-string">"Scalable & Resilient"</span>,
+  <span class="syntax-prop">craftsmanship</span>: <span class="syntax-string">"Pixel-Perfect"</span>
+};</code></pre>
+            </div>
+            <div class="card-footer-metric">
+              <div class="metric-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="metric-title">System Status</div>
+                <div class="metric-sub">Optimal latency • 99.9% uptime</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to explore">
+        <span class="scroll-label">Scroll to explore</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Core Philosophy</span>
+          <h2 class="section-title">Engineering with <span class="glow-text">Elegance & Precision</span></h2>
+          <p class="section-subtitle">Bridging robust backend architecture with world-class user experiences.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">Clean, Modular Code</h3>
+            <p class="card-desc">
+              Writing maintainable, well-documented code built on solid design principles, type safety, and automated
+              testing for long-term project longevity.
+            </p>
+          </div>
+
+          <div class="about-card glass">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Scalable Architecture</h3>
+            <p class="card-desc">
+              Engineering reliable relational schemas, performant APIs, caching layers, and decoupled micro-services
+              that scale comfortably under heavy traffic.
+            </p>
+          </div>
+
+          <div class="about-card glass">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Sensory UI & UX</h3>
+            <p class="card-desc">
+              Crafting intuitive interfaces inspired by executive luxury tech—combining fluid micro-interactions, dark
+              glassmorphism, and rapid responsiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section project-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title projects-main-title">Projects</h2>
+        </div>
+
+        <!-- =================================================================
+             PROJECTS LIST CONTAINER: Empty space where you can manually add projects!
+             Each project is displayed in a clean list row with its title.
+             ================================================================= -->
+        <div class="projects-list-container glass">
+          <ul class="projects-list" id="projectsList">
+
+            <!-- PROJECT ITEM 1: Smart Gym Management -->
+            <li class="project-list-item">
+              <div class="project-item-left">
+                <span class="project-num">01</span>
+                <div class="project-title-meta">
+                  <h3 class="project-title-link" role="button" tabindex="0" data-modal-target="#projectModal"
+                    title="Click to view project options">
+                    Smart Gym Management
+                    <svg class="title-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </h3>
+                  <span class="project-meta-desc">Flagship Full Stack SaaS &bull; Real-Time Telemetry</span>
+                </div>
+              </div>
+
+              <div class="project-item-right">
+                <div class="project-tag-group">
+                  <span class="tech-pill">React</span>
+                  <span class="tech-pill">Node.js</span>
+                  <span class="tech-pill">PostgreSQL</span>
+                </div>
+                <button type="button" class="btn btn-secondary btn-item-view" data-modal-target="#projectModal">
+                  <span>View Project ↗</span>
+                </button>
+              </div>
+            </li>
+
+            <!-- =============================================================
+                 MANUAL ADDITION TEMPLATE (Duplicate this block for new projects)
+                 =============================================================
+            <li class="project-list-item">
+              <div class="project-item-left">
+                <span class="project-num">02</span>
+                <div class="project-title-meta">
+                  <h3 class="project-title-link" role="button" tabindex="0">
+                    Your New Project Title
+                    <svg class="title-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </h3>
+                  <span class="project-meta-desc">Project Category / One-line Description</span>
+                </div>
+              </div>
+
+              <div class="project-item-right">
+                <div class="project-tag-group">
+                  <span class="tech-pill">Tech 1</span>
+                  <span class="tech-pill">Tech 2</span>
+                </div>
+                <a href="https://your-link.com" target="_blank" class="btn btn-secondary btn-item-view">
+                  <span>View Project ↗</span>
+                </a>
+              </div>
+            </li>
+            ============================================================== -->
+
+          </ul>
+
+          <!-- Empty Space / Reserved Slot for Manually Adding Projects -->
+          <div class="project-empty-space" id="projectEmptySpace">
+            <div class="empty-space-inner">
+              <div class="empty-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+              <div class="empty-text-wrap">
+                <h4 class="empty-space-title">Empty Space for Your Projects</h4>
+                <p class="empty-space-subtitle">
+                  Duplicate the list item template in <code>index.html</code> to manually add your next project title
+                  and link here.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Technical Arsenal</span>
+          <h2 class="section-title">Skills & <span class="glow-text">Technologies</span></h2>
+          <p class="section-subtitle">Battle-tested tools and frameworks utilized to construct enterprise-grade
+            software.</p>
+        </div>
+
+        <div class="skills-list-container glass">
+          <ul class="skills-list" id="skillsList">
+            <!-- 01. Frontend Engineering -->
+            <li class="skill-list-item">
+              <div class="skill-item-left">
+                <span class="skill-num">01</span>
+                <div class="skill-icon-gold">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <div class="skill-title-meta">
+                  <h3 class="skill-cat-title">Frontend Engineering</h3>
+                  <p class="skill-cat-desc">Modern component-driven web user interfaces with silky transitions and
+                    optimized rendering cycles.</p>
+                </div>
+              </div>
+
+              <div class="skill-item-right">
+                <div class="skill-tags">
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">JavaScript (ESNext)</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">HTML5 / CSS3</span>
+                  <span class="skill-tag">TailwindCSS</span>
+                  <span class="skill-tag">Responsive UI/UX</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 02. Backend Architecture -->
+            <li class="skill-list-item">
+              <div class="skill-item-left">
+                <span class="skill-num">02</span>
+                <div class="skill-icon-gold">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <div class="skill-title-meta">
+                  <h3 class="skill-cat-title">Backend Architecture</h3>
+                  <p class="skill-cat-desc">Resilient servers, strict authentication, micro-services, and relational
+                    database management.</p>
+                </div>
+              </div>
+
+              <div class="skill-item-right">
+                <div class="skill-tags">
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">PostgreSQL</span>
+                  <span class="skill-tag">RESTful APIs</span>
+                  <span class="skill-tag">JWT / OAuth</span>
+                  <span class="skill-tag">ORM / Prisma / SQL</span>
+                </div>
+              </div>
+            </li>
+
+            <!-- 03. System & Workflow -->
+            <li class="skill-list-item">
+              <div class="skill-item-left">
+                <span class="skill-num">03</span>
+                <div class="skill-icon-gold">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="skill-title-meta">
+                  <h3 class="skill-cat-title">System & Workflow</h3>
+                  <p class="skill-cat-desc">Smooth automated deployment pipelines, version control, and
+                    containerization.</p>
+                </div>
+              </div>
+
+              <div class="skill-item-right">
+                <div class="skill-tags">
+                  <span class="skill-tag">Git / GitHub</span>
+                  <span class="skill-tag">Docker</span>
+                  <span class="skill-tag">CI / CD</span>
+                  <span class="skill-tag">Postman</span>
+                  <span class="skill-tag">Linux / Nginx</span>
+                  <span class="skill-tag">Cloud Hosting</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box glass">
+          <div class="contact-info">
+            <span class="section-badge">Get In Touch</span>
+            <h2 class="contact-title">Let's Build Something <span class="glow-text">Exceptional</span>.</h2>
+            <p class="contact-desc">
+              Whether you are looking to build a high-performance web application, scale your backend, or need a
+              developer with an obsessive eye for detail—my inbox is open.
+            </p>
+
+            <div class="contact-meta-list">
+              <div class="contact-meta-item">
+                <div class="meta-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="meta-label">Email</span>
+                  <a href="mailto:nishantbisht709@gmail.com" class="meta-value">nishantbisht709@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <div class="meta-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="meta-label">Location</span>
+                  <span class="meta-value">Available Globally / Remote</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <ul class="wrapper">
+              <li class="icon github">
+                <span class="tooltip">GitHub</span>
+                <a href="https://github.com/Nishant391" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                  class="social-icon-link">
+                  <svg viewBox="0 0 24 24" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                  class="social-icon-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" class="bi bi-instagram"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon linkedin">
+                <span class="tooltip">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/nishantbisht8392" target="_blank" rel="noopener noreferrer"
+                  aria-label="LinkedIn" class="social-icon-link">
+                  <svg viewBox="0 0 448 512" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z">
+                    </path>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/nishantbisht709@gmail.com"
+            method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Portfolio Message for Nishant">
+            <div class="form-group">
+              <label for="senderName">Your Name</label>
+              <input type="text" id="senderName" name="name" required placeholder="First Name Last Name"
+                class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="senderEmail">Email Address</label>
+              <input type="email" id="senderEmail" name="email" required placeholder="abc@gmail.com" class="form-input">
+            </div>
+            <div class="form-group">
+              <label for="senderMessage">Project Overview</label>
+              <textarea id="senderMessage" name="message" rows="4" required
+                placeholder="Describe your project vision, timeline and requirements..." class="form-input"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit" id="submitContactBtn">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-brand">Nishant</span>
+        <span class="footer-separator">•</span>
+        <span class="footer-tagline">Full Stack Developer</span>
+      </div>
+      <div class="footer-center">
+        <span>Crafted with Amber Gold Executive aesthetics.</span>
+      </div>
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" aria-label="Back to top">
+          <span>Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div class="modal-backdrop" id="resumeModal" aria-hidden="true">
+    <div class="modal-window glass" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-eyebrow">Curriculum Vitae</span>
+          <h3 id="resumeTitle" class="modal-title">Nishant — Full Stack Developer</h3>
+        </div>
+        <button class="modal-close" id="closeResumeBtn" aria-label="Close resume modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="resume-preview-card">
+          <div class="resume-hero">
+            <h4>Executive Summary</h4>
+            <p>Full Stack Developer with deep specialization in modern component libraries, scalable Node.js
+              architecture, and high-performance PostgreSQL database design.</p>
+          </div>
+          <div class="resume-section">
+            <h5>Core Competencies</h5>
+            <ul>
+              <li><strong>Frontend:</strong> React, JavaScript, TypeScript, Next.js, CSS Architecture, Canvas APIs</li>
+              <li><strong>Backend:</strong> Node.js, Express, PostgreSQL, RESTful Services, Microservices</li>
+              <li><strong>Performance & Security:</strong> Query optimization, JWT Auth, CORS, Caching strategies</li>
+            </ul>
+          </div>
+          <div class="resume-section">
+            <h5>Key Projects</h5>
+            <ul>
+              <li><strong>Smart Gym Management:</strong> Multi-tenant SaaS with real-time telemetry, membership
+                analytics, and automated trainer booking.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#download" class="btn btn-primary" id="downloadResumeBtn"
+          onclick="alert('Downloading Nishant_Resume_FullStack.pdf'); return false;">
+          <span>Download CV (.PDF)</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </a>
+        <button class="btn btn-secondary" id="modalDismissBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT PREVIEW MODAL -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+    <div class="modal-window modal-window-large glass" role="dialog" aria-modal="true"
+      aria-labelledby="projectModalTitle">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <span class="modal-eyebrow">Project View Options &bull; Live Showcase</span>
+          <h3 id="projectModalTitle" class="modal-title">Smart Gym Management</h3>
+        </div>
+        <button class="modal-close" id="closeProjectBtn" aria-label="Close project modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Direct Viewing Options Bar -->
+        <div class="project-options-panel">
+          <div class="options-intro">
+            <span class="options-badge">Direct Access</span>
+            <h4 class="options-heading">Options for Viewing This Project</h4>
+            <p class="options-sub">You can open the live production deployment or explore the telemetry below.</p>
+          </div>
+
+          <div class="options-btn-group">
+            <a href="https://gymnishant.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-primary option-action-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Option 1: Open Live Project (gymnishant.vercel.app)</span>
+            </a>
+
+            <button type="button" class="btn btn-secondary option-action-btn" id="copyProjectLinkBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="copyBtnStatus">Option 2: Copy Live Link</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project Overview & Highlights -->
+        <p class="modal-lead">
+          A complete enterprise-ready gym management system with member tracking, automated trainer scheduling, and
+          real-time attendance telemetry.
+        </p>
+
+        <div class="project-modal-grid">
+          <div class="modal-grid-box">
+            <h4>Client Challenge</h4>
+            <p>Gym franchises suffered from fragmented member check-in records, trainer commission disputes, and clunky
+              legacy software that stalled on peak morning hours.</p>
+          </div>
+          <div class="modal-grid-box">
+            <h4>Full Stack Solution</h4>
+            <p>Architected a lightning-fast React single-page frontend linked to a Node.js API with an indexed
+              PostgreSQL database delivering sub-20ms dashboard queries.</p>
+          </div>
+        </div>
+
+        <div class="modal-tech-row">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">PostgreSQL</span>
+          <span class="tech-pill">WebSocket</span>
+          <span class="tech-pill">Docker</span>
+          <span class="tech-pill">Vercel</span>
+        </div>
+
+        <!-- Interactive Telemetry Dashboard Mockup in Modal -->
+        <div class="modal-preview-section">
+          <div class="modal-preview-header">
+            <span class="preview-tag">Interactive Preview</span>
+            <span class="preview-sub">System Telemetry &amp; Real-time Aggregation</span>
+          </div>
+
+          <div class="project-mockup-wrapper modal-mockup-container" id="dashboardMockup">
+            <div class="dashboard-window glass">
+              <!-- Window Chrome -->
+              <div class="dashboard-window-header">
+                <div class="window-controls">
+                  <span class="control-dot close"></span>
+                  <span class="control-dot min"></span>
+                  <span class="control-dot max"></span>
+                </div>
+                <div class="browser-address-bar">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <span>app.smartgym.internal/analytics</span>
+                </div>
+                <div class="window-live-tag">
+                  <span class="pulse-amber"></span> Live System
+                </div>
+              </div>
+
+              <!-- Dashboard Body Layout -->
+              <div class="dashboard-inner-grid">
+                <!-- Sidebar -->
+                <aside class="dash-sidebar">
+                  <div class="dash-logo">
+                    <span class="dash-logo-icon">⚡</span>
+                    <span class="dash-logo-text">ApexGym</span>
+                  </div>
+                  <ul class="dash-nav-list">
+                    <li class="dash-nav-item active">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                      </svg>
+                      <span>Overview</span>
+                    </li>
+                    <li class="dash-nav-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                      <span>Members</span>
+                    </li>
+                    <li class="dash-nav-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                      </svg>
+                      <span>Trainers</span>
+                    </li>
+                    <li class="dash-nav-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Schedules</span>
+                    </li>
+                  </ul>
+                </aside>
+
+                <!-- Main Panel -->
+                <div class="dash-main-panel">
+                  <!-- Metric Cards with Golden Accent Lines -->
+                  <div class="dash-metrics-row">
+                    <div class="dash-metric-card" data-metric="members">
+                      <div class="metric-accent-line"></div>
+                      <div class="metric-label">Active Members</div>
+                      <div class="metric-value">1,420</div>
+                      <div class="metric-trend positive">+14.2% this mo</div>
+                    </div>
+
+                    <div class="dash-metric-card" data-metric="trainers">
+                      <div class="metric-accent-line"></div>
+                      <div class="metric-label">Trainer Roster</div>
+                      <div class="metric-value">38</div>
+                      <div class="metric-trend highlight">100% On-Duty</div>
+                    </div>
+
+                    <div class="dash-metric-card" data-metric="checkins">
+                      <div class="metric-accent-line"></div>
+                      <div class="metric-label">Today's Check-ins</div>
+                      <div class="metric-value">584</div>
+                      <div class="metric-trend positive">+9.8% peak</div>
+                    </div>
+                  </div>
+
+                  <!-- Chart Panel -->
+                  <div class="dash-chart-card">
+                    <div class="chart-header">
+                      <div>
+                        <div class="chart-title">Member Attendance & Peak Velocity</div>
+                        <div class="chart-sub">Real-time PostgreSQL aggregation query (12ms)</div>
+                      </div>
+                      <div class="chart-pills">
+                        <span class="active">Daily</span>
+                        <span>Weekly</span>
+                        <span>Monthly</span>
+                      </div>
+                    </div>
+
+                    <div class="chart-canvas-container">
+                      <!-- Responsive Interactive SVG Chart -->
+                      <svg class="gold-chart-svg" viewBox="0 0 500 160" preserveAspectRatio="none">
+                        <defs>
+                          <linearGradient id="goldGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.45" />
+                            <stop offset="70%" stop-color="#D97706" stop-opacity="0.1" />
+                            <stop offset="100%" stop-color="#0B0D13" stop-opacity="0" />
+                          </linearGradient>
+                          <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                          </filter>
+                        </defs>
+                        <!-- Grid lines -->
+                        <line x1="0" y1="40" x2="500" y2="40" stroke="rgba(245, 158, 11, 0.08)"
+                          stroke-dasharray="4,4" />
+                        <line x1="0" y1="80" x2="500" y2="80" stroke="rgba(245, 158, 11, 0.08)"
+                          stroke-dasharray="4,4" />
+                        <line x1="0" y1="120" x2="500" y2="120" stroke="rgba(245, 158, 11, 0.08)"
+                          stroke-dasharray="4,4" />
+
+                        <!-- Area Fill -->
+                        <path d="M 0,140 Q 60,110 120,125 T 240,65 T 360,45 T 500,20 L 500,160 L 0,160 Z"
+                          fill="url(#goldGradient)" />
+                        <!-- Golden Line -->
+                        <path class="chart-line" d="M 0,140 Q 60,110 120,125 T 240,65 T 360,45 T 500,20" fill="none"
+                          stroke="#F59E0B" stroke-width="3" filter="url(#goldGlow)" />
+
+                        <!-- Interactive Nodes -->
+                        <circle cx="120" cy="125" r="4.5" class="chart-point" />
+                        <circle cx="240" cy="65" r="4.5" class="chart-point" />
+                        <circle cx="360" cy="45" r="4.5" class="chart-point" />
+                        <circle cx="500" cy="20" r="5.5" class="chart-point active" />
+                      </svg>
+                    </div>
+
+                    <!-- Bottom Live Check-in Activity Bar -->
+                    <div class="dash-activity-strip">
+                      <div class="activity-pill">
+                        <span class="user-avatar">MK</span>
+                        <span class="user-name">Marcus K.</span>
+                        <span class="status-tag in">Checked In</span>
+                        <span class="timestamp">2m ago</span>
+                      </div>
+                      <div class="activity-pill">
+                        <span class="user-avatar">SL</span>
+                        <span class="user-name">Sarah L.</span>
+                        <span class="status-tag trainer">Trainer Session</span>
+                        <span class="timestamp">6m ago</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://gymnishant.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span>Launch Live App ↗</span>
+        </a>
+        <button class="btn btn-secondary" id="modalDismissProjectBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
